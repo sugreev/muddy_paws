@@ -4,7 +4,7 @@ import typing
 import re
 import logging
 
-logging.basicConfig(filename='status.log', encoding='utf-8')
+logging.basicConfig(filename='status.log',level=logging.INFO)
 
 
 def is_match(dog_dict: typing.Dict):
