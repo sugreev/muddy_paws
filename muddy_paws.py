@@ -3,6 +3,7 @@ import json
 import typing
 import re
 import logging
+import datetime
 
 logging.basicConfig(filename='status.log',level=logging.INFO)
 
@@ -51,6 +52,7 @@ def main():
     req = requests.request(
         "GET", "https://tailtracker-c8609.appspot.com/api/public/dogs"
     )
+    logging.info(datetime.datetime.now().isoformat())
     logging.info(f"Request Status: {req.status_code}")
     dog_list = req.json()
 
