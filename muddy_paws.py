@@ -2,6 +2,9 @@ import requests
 import json
 import typing
 import re
+import logging
+
+logging.basicConfig(filename='status.log', encoding='utf-8')
 
 
 def is_match(dog_dict: typing.Dict):
@@ -48,7 +51,7 @@ def main():
     req = requests.request(
         "GET", "https://tailtracker-c8609.appspot.com/api/public/dogs"
     )
-    print(f"Request Status: {req.status_code}")
+    logging.info(f"Request Status: {req.status_code}")
     dog_list = req.json()
 
     # find IDs of newly available dogs
@@ -59,7 +62,7 @@ def main():
     # print match decision and update ID text file
     if new_ids:
         new_dogs = [d for d in available if d["ID"] in new_ids]
-        print(
+        logging.info(
             make_email_content(
                 sorted(
                     [is_match(d) for d in new_dogs], key=lambda x: x[-1], reverse=True
@@ -70,7 +73,7 @@ def main():
         with open("old_ids.txt", "w") as f:
             f.write(",".join(ids))
     else:
-        print("No updates")
+        logging.info("No updates")
 
 
 if __name__ == "__main__":
