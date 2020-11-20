@@ -5,6 +5,11 @@ import re
 
 
 def is_match(dog_dict: typing.Dict):
+    """Given a dict with an adoptable dog's info,
+    extract name, age, current weight, expected full grown
+    weight and determine if fits criteria. Return stats and
+    match decision in a tuple."""
+
     def _parse_age(age_string: str) -> int:
         num, _ = age_string.split()
         return 1 if num == "a" else int(num)
@@ -22,6 +27,9 @@ def is_match(dog_dict: typing.Dict):
 
 
 def make_email_content(dog_match_list: typing.List[typing.Tuple]):
+    """Construct print-able/email-able string from
+     list of match tuples"""
+
     content = ""
     for dog in dog_match_list:
         content += (
@@ -32,18 +40,23 @@ def make_email_content(dog_match_list: typing.List[typing.Tuple]):
 
 
 def main():
+    # read last recorded list of available dog IDs
     with open("old_ids.txt", "r") as f:
         old_ids = f.read().split(",")
 
+    # get current list of adoptable dogs
     req = requests.request(
         "GET", "https://tailtracker-c8609.appspot.com/api/public/dogs"
     )
     print(f"Request Status: {req.status_code}")
     dog_list = req.json()
+
+    # find IDs of newly available dogs
     available = [d for d in dog_list if d["Status"] == "Available"]
     ids = [d["ID"] for d in available]
     new_ids = set(ids).difference(old_ids)
 
+    # print match decision and update ID text file
     if new_ids:
         new_dogs = [d for d in available if d["ID"] in new_ids]
         print(
