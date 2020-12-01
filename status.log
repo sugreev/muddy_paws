@@ -703,3 +703,9 @@ INFO:root:No updates
 INFO:root:2020-12-01T12:30:00.566827
 INFO:root:Request Status: 200
 INFO:root:No updates
+INFO:root:2020-12-01T13:00:00.903937
+INFO:root:Request Status: 200
+INFO:root:Zoey, Age: 4, Weights: 100,0, MATCH: False
+Dallas, Age: 2, Weights: 8,60, MATCH: False
+Denver, Age: 2, Weights: 8,60, MATCH: False
+
