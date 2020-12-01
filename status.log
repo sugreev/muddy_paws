@@ -722,3 +722,17 @@ INFO:root:No updates
 INFO:root:2020-12-01T15:00:01.378299
 INFO:root:Request Status: 200
 INFO:root:No updates
+INFO:root:2020-12-01T15:30:00.794337
+INFO:root:Request Status: 200
+INFO:root:2020-12-01T16:00:00.582738
+INFO:root:Request Status: 200
+INFO:root:2020-12-01T16:30:01.215496
+INFO:root:Request Status: 200
+INFO:root:2020-12-01T17:00:01.265540
+INFO:root:Request Status: 200
+INFO:root:2020-12-01T17:16:48.264175
+INFO:root:Request Status: 200
+INFO:root:2020-12-01T17:20:23.208720
+INFO:root:Request Status: 200
+INFO:root:Pody, Age: 2, Weights: 7,5, MATCH: True
+

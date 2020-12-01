@@ -20,9 +20,9 @@ def is_match(dog_dict: typing.Dict):
 
     def _extract_full_weight(desc: str):
         m = re.search(r"(?P<weight>\d{1,2}) ?lbs", desc)
-        return int(m.group("weight")) if m else None
+        return int(float(m.group("weight"))) if m else None
 
-    current_weight = int(dog_dict["CurrentWeightPounds"])
+    current_weight = int(float(dog_dict["CurrentWeightPounds"]))
     age = _parse_age(dog_dict["Age"])
     full_weight = _extract_full_weight(dog_dict["Description"])
 
