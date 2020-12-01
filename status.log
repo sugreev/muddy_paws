@@ -709,3 +709,7 @@ INFO:root:Zoey, Age: 4, Weights: 100,0, MATCH: False
 Dallas, Age: 2, Weights: 8,60, MATCH: False
 Denver, Age: 2, Weights: 8,60, MATCH: False
 
+INFO:root:2020-12-01T13:30:00.650690
+INFO:root:Request Status: 200
+INFO:root:Bowie, Age: 3, Weights: 25,25, MATCH: True
+
