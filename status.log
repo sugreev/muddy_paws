@@ -700,3 +700,6 @@ INFO:root:Lola, Age: 1, Weights: 35,35, MATCH: True
 INFO:root:2020-12-01T12:00:01.154919
 INFO:root:Request Status: 200
 INFO:root:No updates
+INFO:root:2020-12-01T12:30:00.566827
+INFO:root:Request Status: 200
+INFO:root:No updates
