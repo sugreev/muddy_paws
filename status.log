@@ -785,3 +785,6 @@ Petey, Age: 7, Weights: 49,90, MATCH: False
 INFO:root:2020-12-02T11:30:01.261171
 INFO:root:Request Status: 200
 INFO:root:No updates
+INFO:root:2020-12-02T12:00:00.674444
+INFO:root:Request Status: 200
+INFO:root:No updates
