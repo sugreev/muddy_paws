@@ -835,3 +835,8 @@ INFO:root:No updates
 INFO:root:2020-12-02T17:30:01.079681
 INFO:root:Request Status: 200
 INFO:root:No updates
+INFO:root:2020-12-02T18:00:01.539019
+INFO:root:Request Status: 200
+INFO:root:Rose, Age: 1, Weights: 33,33, MATCH: True
+Lisa, Age: 2, Weights: 24,50, MATCH: False
+
