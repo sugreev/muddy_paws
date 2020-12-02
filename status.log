@@ -758,3 +758,27 @@ INFO:root:No updates
 INFO:root:2020-12-02T09:30:01.563840
 INFO:root:Request Status: 200
 INFO:root:No updates
+INFO:root:2020-12-02T10:00:01.353815
+INFO:root:Request Status: 200
+INFO:root:Brownie, Age: 2, Weights: 40,40, MATCH: True
+
+INFO:root:2020-12-02T10:30:00.890166
+INFO:root:Request Status: 200
+INFO:root:Brownie, Age: 2, Weights: 40,40, MATCH: True
+Penelope, Age: 1, Weights: 10,10, MATCH: True
+Petey, Age: 6, Weights: 49,90, MATCH: False
+
+INFO:root:2020-12-02T11:00:01.438190
+INFO:root:Request Status: 200
+INFO:root:Brownie, Age: 2, Weights: 40,40, MATCH: True
+Penelope, Age: 1, Weights: 10,10, MATCH: True
+Sally, Age: 2, Weights: 50,50, MATCH: False
+Petey, Age: 7, Weights: 49,90, MATCH: False
+
+INFO:root:2020-12-02T11:18:15.235890
+INFO:root:Request Status: 200
+INFO:root:Brownie, Age: 2, Weights: 40,40, MATCH: True
+Penelope, Age: 1, Weights: 10,10, MATCH: True
+Sally, Age: 2, Weights: 50,50, MATCH: False
+Petey, Age: 7, Weights: 49,90, MATCH: False
+
