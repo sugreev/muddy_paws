@@ -1,11 +1,13 @@
-import requests
 import json
 import typing
 import re
 import logging
 import datetime
+import os
+import requests
 
-logging.basicConfig(filename='status.log',level=logging.INFO)
+
+logging.basicConfig(filename='status.log', level=logging.INFO)
 
 
 def is_match(dog_dict: typing.Dict):
@@ -30,7 +32,7 @@ def is_match(dog_dict: typing.Dict):
     return (dog_dict["Name"], age, current_weight, full_weight, _is_match)
 
 
-def make_email_content(dog_match_list: typing.List[typing.Tuple]):
+def make_log_string(dog_match_list: typing.List[typing.Tuple]):
     """Construct print-able/email-able string from
      list of match tuples"""
 
@@ -64,13 +66,18 @@ def main():
     # print match decision and update ID text file
     if new_ids:
         new_dogs = [d for d in available if d["ID"] in new_ids]
-        logging.info(
-            make_email_content(
-                sorted(
-                    [is_match(d) for d in new_dogs], key=lambda x: x[-1], reverse=True
-                )
-            )
-        )
+
+        # construct email content for new dog notification
+        log_lines = make_log_string(
+            sorted([is_match(d) for d in new_dogs], key=lambda x: x[-1], reverse=True))
+        logging.info(log_lines)
+
+        # send email via Maker/IFTTT applet
+        payload = {}
+        payload["value1"] = 'NEW PUP MATCH!' if 'MATCH: True' in log_lines else 'New pups added :/'
+        ifttt_key = os.environ['MAKER_KEY']
+        post_url = f"https://maker.ifttt.com/trigger/muddy_paws_new_pup/with/key/{ifttt_key}"
+        requests.post(url=post_url, data=payload)
 
         with open("old_ids.txt", "w") as f:
             f.write(",".join(ids))
