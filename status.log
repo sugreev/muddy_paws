@@ -782,3 +782,6 @@ Penelope, Age: 1, Weights: 10,10, MATCH: True
 Sally, Age: 2, Weights: 50,50, MATCH: False
 Petey, Age: 7, Weights: 49,90, MATCH: False
 
+INFO:root:2020-12-02T11:30:01.261171
+INFO:root:Request Status: 200
+INFO:root:No updates
