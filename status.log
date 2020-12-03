@@ -871,3 +871,8 @@ INFO:root:No updates
 INFO:root:2020-12-03T12:00:00.900052
 INFO:root:Request Status: 200
 INFO:root:No updates
+INFO:root:2020-12-03T12:30:01.034482
+INFO:root:Request Status: 200
+INFO:root:Junior, Age: 2, Weights: 11,11, MATCH: True
+Anya, Age: 9, Weights: 29,50, MATCH: False
+
