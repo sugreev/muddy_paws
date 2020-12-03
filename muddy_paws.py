@@ -54,8 +54,7 @@ def main():
     req = requests.request(
         "GET", "https://tailtracker-c8609.appspot.com/api/public/dogs"
     )
-    logging.info(datetime.datetime.now().isoformat())
-    logging.info(f"Request Status: {req.status_code}")
+    logging.info(f"Status: {req.status_code} at {datetime.datetime.now().isoformat()}")
     dog_list = req.json()
 
     # find IDs of newly available dogs
