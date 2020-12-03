@@ -80,9 +80,6 @@ def main():
 
         with open("old_ids.txt", "w") as f:
             f.write(",".join(ids))
-    else:
-        logging.info("No updates")
-
 
 if __name__ == "__main__":
     main()
